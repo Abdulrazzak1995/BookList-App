@@ -14,7 +14,7 @@ if(title === '' || author === '' || isbn === ''){
 }else{
 
 // Instatiate Book
-const book = new book(title , author , isbn);
+const book = new Book(title , author , isbn);
 
 // Add Book to UI
 UIEvent.addBookToList(book);
@@ -23,7 +23,7 @@ UIEvent.addBookToList(book);
 UIEvent.showAlert('Book Added' , 'Success');
 
 // Add Book to store
-StorageEvent.addBook(book);
+Store.addBook(book);
 
 // Clear fields
 UIEvent.clearFieldds();
