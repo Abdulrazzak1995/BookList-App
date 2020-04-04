@@ -1,7 +1,6 @@
 // Event: Remove a Book
 
-document.querySelector('#book-list').addEventListener('click', (e) 
-=> {
+document.querySelector('#book-list').addEventListener('click', (e) => {
     // Remove book from UI
 
     UI.deleteBook(e.target);

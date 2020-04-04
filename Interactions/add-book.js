@@ -1,6 +1,5 @@
 // Event: Add a book
-document.querySelector('#book-form').addEventListener('submit' , (e)
-=>{
+document.querySelector('#book-form').addEventListener('submit' , (e) => {
     // Prevent actual submit
     e.preventDefault();
 // Get Form values
@@ -10,23 +9,23 @@ const isbn = document.querySelector('#isbn').value;
 
 //Validate
 if(title === '' || author === '' || isbn === ''){
-    UIEvent.showAlert('Please fill in all fields' , 'danger');
+    UI.showAlert('Please fill in all fields' , 'danger');
 }else{
 
 // Instatiate Book
 const book = new Book(title , author , isbn);
 
 // Add Book to UI
-UIEvent.addBookToList(book);
+UI.addBookToList(book);
 
 // Show success massege
-UIEvent.showAlert('Book Added' , 'Success');
+UI.showAlert('Book Added' , 'Success');
 
 // Add Book to store
 Store.addBook(book);
 
 // Clear fields
-UIEvent.clearFieldds();
+UI.clearFields();
 
 }
 
